@@ -182,7 +182,7 @@ export const CircularTestimonials = ({
         <div className="image-container" ref={imageContainerRef}>
           {testimonials.map((testimonial, index) => (
             <img
-              key={testimonial.src}
+              key={`${testimonial.src}-${index}`}
               src={testimonial.src}
               alt={testimonial.name}
               className="testimonial-image"
