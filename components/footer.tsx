@@ -3,7 +3,7 @@ import { Sparkles, ArrowRight, Mail, MapPin, Phone, Instagram, Twitter, Linkedin
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#0077B6] via-[#00B4D8] to-[#0077B6]">
+    <footer className="relative overflow-hidden bg-[#0077B6]">
       {/* Background effects */}
       <div className="absolute inset-0">
         <div 
@@ -18,7 +18,7 @@ export function Footer() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Main content */}
-        <div className="py-20">
+        <div className="py-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Brand section */}
             <div className="lg:col-span-5">
@@ -146,7 +146,7 @@ export function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="py-8 border-t border-white/20">
+        <div className="py-4 border-t border-white/20">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-white/80">
               <span className="text-sm">© {new Date().getFullYear()} ORION</span>
