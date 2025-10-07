@@ -41,11 +41,11 @@ export function Navigation() {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-[#00B4D8] relative py-2",
-                  item.href === "/" ? "text-[#00B4D8]" : "text-foreground/70",
+                  pathname === item.href ? "text-[#00B4D8]" : "text-foreground/70",
                 )}
               >
                 {item.label}
-                {item.href === "/" && (
+                {pathname === item.href && (
                   <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#00B4D8]" />
                 )}
               </Link>
@@ -78,7 +78,7 @@ export function Navigation() {
                 href={item.href}
                 className={cn(
                   "block rounded-lg px-3 py-2 text-base font-medium transition-colors",
-                  item.href === "/"
+                  pathname === item.href
                     ? "bg-[#00B4D8]/10 text-[#00B4D8]"
                     : "text-foreground/70 hover:bg-[#00B4D8]/5 hover:text-[#00B4D8]",
                 )}

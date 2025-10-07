@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
+import { TestimonialsStats } from "@/components/testimonials-stats"
 import { ArrowRight, Target, Lightbulb, Zap, Sparkles, Users, TrendingUp } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -63,8 +64,8 @@ export default function HomePage() {
         </div>
       </section>
 
-       {/* Mission Section - Ultra innovative bento grid layout */}
-       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      {/* Mission Section - Ultra innovative bento grid layout */}
+      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0">
           <div
              className="absolute inset-0 opacity-5"
@@ -86,7 +87,7 @@ export default function HomePage() {
                  </div>
                  <span className="text-base font-bold text-[#0077B6] tracking-wider">NOTRE MISSION</span>
                </div>
-             </div>
+            </div>
              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
               Trois piliers, un mouvement
             </h2>
@@ -96,33 +97,6 @@ export default function HomePage() {
           </div>
 
            <div className="relative max-w-6xl mx-auto">
-             {/* Trois lignes d'énergie subtiles */}
-             <div className="absolute inset-0 w-full h-full hidden lg:block pointer-events-none" style={{ zIndex: 0 }}>
-               <div className="absolute top-40 left-1/4 w-1/6 h-px bg-gradient-to-r from-transparent via-[#00B4D8]/30 to-transparent animate-pulse"></div>
-               <div className="absolute top-40 left-1/2 w-1/6 h-px bg-gradient-to-r from-transparent via-[#00B4D8]/30 to-transparent animate-pulse" style={{ animationDelay: "0.5s" }}></div>
-               <div className="absolute top-40 left-3/4 w-1/6 h-px bg-gradient-to-r from-transparent via-[#00B4D8]/30 to-transparent animate-pulse" style={{ animationDelay: "1s" }}></div>
-             </div>
-
-            <svg className="absolute inset-0 w-full h-full lg:hidden pointer-events-none" style={{ zIndex: 0 }}>
-               {/* Mobile serpentine connections */}
-              <path
-                 d="M 40 180 Q -20 280, 40 380 Q 100 480, 40 380"
-                stroke="url(#gradient1)"
-                strokeWidth="3"
-                fill="none"
-                 strokeDasharray="10 6"
-                 className="animate-dash opacity-50"
-              />
-              <path
-                 d="M 40 380 Q -20 480, 40 580 Q 100 680, 40 580"
-                stroke="url(#gradient2)"
-                strokeWidth="3"
-                fill="none"
-                 strokeDasharray="10 6"
-                 className="animate-dash opacity-50"
-                 style={{ animationDelay: "0.6s" }}
-              />
-            </svg>
 
              <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-20 relative" style={{ zIndex: 1 }}>
               {/* Unité */}
@@ -371,6 +345,9 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Testimonials & Stats Section */}
+      <TestimonialsStats />
+
       {/* CTA Section - Ultra modern */}
       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#0077B6]">
@@ -390,32 +367,32 @@ export default function HomePage() {
                   </div>
                   <span className="text-base font-bold text-white tracking-wider">REJOIGNEZ LE MOUVEMENT</span>
                 </div>
-              </div>
+          </div>
 
               <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                Prêt à rejoindre ORION ?
-              </h2>
+            Prêt à rejoindre ORION ?
+          </h2>
               <p className="text-xl sm:text-2xl text-white/90 mb-12 text-pretty leading-relaxed">
-                Ensemble, transformons l'énergie collective en opportunités concrètes pour l'avenir de la Guinée
-              </p>
+            Ensemble, transformons l'énergie collective en opportunités concrètes pour l'avenir de la Guinée
+          </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-white hover:bg-white/90 text-[#0077B6] text-lg h-14 px-10 rounded-full shadow-2xl hover:shadow-white/30 transition-all hover:scale-105"
-                >
-                  <Link href="/contact">
-                    Rejoindre ORION
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button
-                  asChild
-                  size="lg"
-                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white text-lg h-14 px-10 rounded-full transition-all hover:scale-105"
-                >
-                  <Link href="/blog">Lire notre blog</Link>
-                </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white hover:bg-white/90 text-[#0077B6] text-lg h-14 px-10 rounded-full shadow-2xl hover:shadow-white/30 transition-all hover:scale-105"
+            >
+              <Link href="/contact">
+                Rejoindre ORION
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white text-lg h-14 px-10 rounded-full transition-all hover:scale-105"
+            >
+              <Link href="/blog">Lire notre blog</Link>
+            </Button>
               </div>
             </div>
 
