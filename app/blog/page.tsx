@@ -84,11 +84,20 @@ export default function BlogPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-card/30">
         <div className="mx-auto max-w-7xl text-center">
-          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Blog ORION</Badge>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+          <div className="relative mb-8">
+            <div className="inline-flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+              </div>
+              <span className="text-base font-bold text-[#0077B6] tracking-wider">BLOG ORION</span>
+            </div>
+          </div>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
             Histoires, insights et inspiration
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+          <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
             Découvrez les coulisses de nos projets, les success stories de notre communauté et les tendances qui
             façonnent l'avenir
           </p>
@@ -119,46 +128,69 @@ export default function BlogPage() {
       {/* Featured Posts */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="flex items-center gap-2 mb-8">
-            <TrendingUp className="h-5 w-5 text-primary" />
-            <h2 className="text-2xl font-bold">Articles à la une</h2>
+          <div className="text-center mb-16">
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#0077B6] tracking-wider">ARTICLES À LA UNE</span>
+              </div>
+            </div>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
+              Nos coups de cœur
+            </h2>
+            <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
+              Des articles qui marquent et inspirent notre communauté
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {featuredPosts.map((post) => (
               <Card
                 key={post.id}
-                className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-primary/10 transition-all"
+                className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#0077B6]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#0077B6]/30 flex flex-col p-0"
               >
-                <div className="aspect-video bg-muted relative overflow-hidden">
+                <div className="aspect-[4/3] relative overflow-hidden">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center" 
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" 
                     style={{ backgroundImage: `url('${post.image}')` }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
-                  <Badge className="absolute top-4 left-4 bg-primary/90 text-primary-foreground border-0">
-                    {post.category}
-                  </Badge>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-4 w-4" />
-                      <span>{post.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-4 w-4" />
-                      <span>{post.readTime}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/90 via-[#0077B6]/40 to-transparent" />
+                  <div className="absolute top-6 right-6">
+                    <div className="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center">
+                      <TrendingUp className="h-6 w-6 text-white" />
                     </div>
                   </div>
+                  <Badge className="absolute top-6 left-6 bg-white/90 text-[#0077B6] border-0 font-semibold">
+                    {post.category}
+                  </Badge>
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-3xl font-bold mb-2 text-white line-clamp-2">{post.title}</h3>
+                    <div className="flex items-center gap-4 text-sm text-white/90">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-4 w-4" />
+                        <span>{post.readTime}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">{post.title}</h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">{post.excerpt}</p>
+                <div className="p-8 flex flex-col flex-grow">
+                  <p className="text-foreground/70 mb-6 leading-relaxed text-lg flex-grow">{post.excerpt}</p>
 
-                  <Button variant="ghost" className="group-hover:text-primary p-0">
+                  <Button 
+                    variant="ghost" 
+                    className="group-hover:bg-[#0077B6] group-hover:text-white bg-[#0077B6]/10 text-[#0077B6] w-full rounded-full h-12 font-semibold transition-all"
+                  >
                     Lire l'article
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
               </Card>
@@ -168,46 +200,68 @@ export default function BlogPage() {
       </section>
 
       {/* Regular Posts */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
-          <h2 className="text-2xl font-bold mb-8">Tous les articles</h2>
+          <div className="text-center mb-16">
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#00B4D8] tracking-wider">TOUS LES ARTICLES</span>
+              </div>
+            </div>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance text-[#00B4D8]">
+              Découvrez notre univers
+            </h2>
+            <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
+              Une collection d'histoires, d'analyses et d'inspirations pour nourrir votre curiosité
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post) => (
               <Card
                 key={post.id}
-                className="overflow-hidden group cursor-pointer hover:shadow-xl hover:shadow-primary/10 transition-all"
+                className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#00B4D8]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#00B4D8]/30 flex flex-col p-0"
               >
-                <div className="aspect-video bg-muted relative overflow-hidden">
+                <div className="aspect-[4/3] relative overflow-hidden">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center" 
+                    className="absolute inset-0 bg-cover bg-center group-hover:scale-110 transition-transform duration-700" 
                     style={{ backgroundImage: `url('${post.image}')` }}
                   />
-                  <Badge className="absolute top-4 left-4 bg-card/90 text-foreground border-border">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#00B4D8]/90 via-[#00B4D8]/40 to-transparent" />
+                  <Badge className="absolute top-4 left-4 bg-white/90 text-[#00B4D8] border-0 font-semibold">
                     {post.category}
                   </Badge>
-                </div>
-
-                <div className="p-6">
-                  <div className="flex items-center gap-4 text-xs text-muted-foreground mb-3">
-                    <div className="flex items-center gap-1">
-                      <Calendar className="h-3 w-3" />
-                      <span>{post.date}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Clock className="h-3 w-3" />
-                      <span>{post.readTime}</span>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="flex items-center gap-4 text-xs text-white/90">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-3 w-3" />
+                        <span>{post.date}</span>
+                      </div>
+                      <div className="flex items-center gap-1">
+                        <Clock className="h-3 w-3" />
+                        <span>{post.readTime}</span>
+                      </div>
                     </div>
                   </div>
+                </div>
 
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                <div className="p-6 flex flex-col flex-grow">
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-[#00B4D8] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-3">{post.excerpt}</p>
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed line-clamp-3 flex-grow">{post.excerpt}</p>
 
-                  <Button variant="ghost" className="group-hover:text-primary p-0 text-sm">
+                  <Button 
+                    variant="ghost" 
+                    className="group-hover:bg-[#00B4D8] group-hover:text-white bg-[#00B4D8]/10 text-[#00B4D8] w-full rounded-full h-10 font-semibold transition-all"
+                  >
                     Lire plus
-                    <ArrowRight className="ml-2 h-3 w-3" />
+                    <ArrowRight className="ml-2 h-3 w-3 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </div>
               </Card>
@@ -217,19 +271,56 @@ export default function BlogPage() {
       </section>
 
       {/* Newsletter CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance">Restez informé de nos actualités</h2>
-          <p className="text-lg text-muted-foreground mb-8 text-pretty">
-            Recevez nos derniers articles, événements et opportunités directement dans votre boîte mail
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="votre@email.com"
-              className="flex-1 px-4 py-3 rounded-lg bg-background border border-border focus:outline-none focus:ring-2 focus:ring-primary"
-            />
-            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">S'abonner</Button>
+      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[#0077B6]">
+          <div className="constellation-dots absolute inset-0 opacity-20" />
+        </div>
+
+        <div className="mx-auto max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
+            {/* Partie texte à gauche */}
+            <div className="text-center lg:text-left">
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-white to-blue-100 animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-blue-100 to-white animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-white to-blue-100 animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-white tracking-wider">RESTEZ CONNECTÉ</span>
+                </div>
+              </div>
+
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                Restez informé de nos actualités
+              </h2>
+              <p className="text-xl sm:text-2xl text-white/90 mb-12 text-pretty leading-relaxed">
+                Recevez nos derniers articles, événements et opportunités directement dans votre boîte mail
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start max-w-lg">
+                <input
+                  type="email"
+                  placeholder="votre@email.com"
+                  className="flex-1 px-6 py-4 rounded-full bg-white/95 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 text-[#0077B6] placeholder-[#0077B6]/60"
+                />
+                <Button className="bg-white hover:bg-white/90 text-[#0077B6] text-lg h-14 px-8 rounded-full shadow-2xl hover:shadow-white/30 transition-all hover:scale-105">
+                  S'abonner
+                </Button>
+              </div>
+            </div>
+
+            {/* Partie image circulaire à droite */}
+            <div className="flex justify-center lg:justify-end lg:pt-16">
+              <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+                <div 
+                  className="w-full h-full bg-cover bg-center"
+                  style={{ 
+                    backgroundImage: "url('/diverse-young-people-collaborating-on-innovative-p.jpg')",
+                    backgroundPosition: 'center'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
