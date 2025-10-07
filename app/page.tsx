@@ -10,33 +10,32 @@ export default function HomePage() {
     <main className="min-h-screen bg-white">
       {/* Hero Section - Full width immersive with constellation effect */}
       <section className="relative h-screen min-h-[700px] w-full overflow-hidden">
-        {/* Constellation background effect */}
-        <div className="absolute inset-0">
-          <Image
-            src="/young-guinean-youth-collaboration-innovation.jpg"
-            alt="ORION - Jeunesse guinéenne unie pour l'innovation"
-            fill
-            className="object-cover"
-            priority
-          />
-          {/* Light overlay for text readability only */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-white/90" />
+        {/* Background image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: "url('/young-guinean-youth-collaboration-innovation.jpg')",
+            backgroundPosition: 'center 10%'
+          }}
+        >
+          {/* Subtle overlay for text readability only */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/10 to-black/20" />
         </div>
 
         {/* Hero content */}
-        <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="relative h-full flex items-end justify-center px-4 sm:px-6 lg:px-8 pb-24">
           <div className="text-center max-w-6xl mx-auto">
-            {/* Animated badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/95 backdrop-blur-md border border-[#0077B6]/20 mb-8 animate-fade-in-up">
-              <Sparkles className="h-4 w-4 text-[#00B4D8]" />
-              <span className="text-sm font-medium text-[#0077B6]">Plateforme d'empowerment de la jeunesse</span>
+            {/* ORION Logo */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/95 backdrop-blur-md border border-[#0077B6]/20 mb-8 animate-fade-in-up">
+              <Sparkles className="h-8 w-8 text-[#0077B6] transition-all duration-300" />
+              <span className="text-2xl font-bold tracking-tight text-[#0077B6]">ORION</span>
             </div>
 
             <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-tight mb-8 text-white text-balance animate-fade-in-up delay-100 drop-shadow-2xl">
               Unir, inspirer, agir
             </h1>
 
-            <p className="text-xl sm:text-2xl lg:text-3xl text-white mb-12 max-w-4xl mx-auto text-pretty leading-relaxed font-light animate-fade-in-up delay-200 drop-shadow-lg">
+            <p className="text-xl sm:text-2xl lg:text-3xl text-white mb-12 max-w-4xl mx-auto text-pretty leading-relaxed font-normal animate-fade-in-up delay-200 drop-shadow-lg bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
               ORION fédère la jeunesse guinéenne autour de projets innovants, culturels et sportifs qui transforment
               l'avenir
             </p>
