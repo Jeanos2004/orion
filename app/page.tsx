@@ -377,36 +377,60 @@ export default function HomePage() {
           <div className="constellation-dots absolute inset-0 opacity-20" />
         </div>
 
-        <div className="mx-auto max-w-5xl text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 mb-8">
-            <Sparkles className="h-4 w-4 text-white" />
-            <span className="text-sm font-medium text-white">Rejoignez le mouvement</span>
-          </div>
+        <div className="mx-auto max-w-7xl relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Partie texte à gauche */}
+            <div className="text-center lg:text-left">
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-white to-blue-100 animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-blue-100 to-white animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-white to-blue-100 animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-white tracking-wider">REJOIGNEZ LE MOUVEMENT</span>
+                </div>
+              </div>
 
-          <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-white text-balance">
-            Prêt à rejoindre ORION ?
-          </h2>
-          <p className="text-xl sm:text-2xl text-white/90 mb-12 text-pretty leading-relaxed max-w-3xl mx-auto">
-            Ensemble, transformons l'énergie collective en opportunités concrètes pour l'avenir de la Guinée
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-white hover:bg-white/90 text-[#0077B6] text-lg h-14 px-10 rounded-full shadow-2xl hover:shadow-white/30 transition-all hover:scale-105"
-            >
-              <Link href="/contact">
-                Rejoindre ORION
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white text-lg h-14 px-10 rounded-full transition-all hover:scale-105"
-            >
-              <Link href="/blog">Lire notre blog</Link>
-            </Button>
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
+                Prêt à rejoindre ORION ?
+              </h2>
+              <p className="text-xl sm:text-2xl text-white/90 mb-12 text-pretty leading-relaxed">
+                Ensemble, transformons l'énergie collective en opportunités concrètes pour l'avenir de la Guinée
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white hover:bg-white/90 text-[#0077B6] text-lg h-14 px-10 rounded-full shadow-2xl hover:shadow-white/30 transition-all hover:scale-105"
+                >
+                  <Link href="/contact">
+                    Rejoindre ORION
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white text-lg h-14 px-10 rounded-full transition-all hover:scale-105"
+                >
+                  <Link href="/blog">Lire notre blog</Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Partie image circulaire à droite */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
+                <div 
+                  className="w-full h-full bg-cover bg-center"
+                  style={{ 
+                    backgroundImage: "url('/people.jpg')",
+                    backgroundPosition: 'center'
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
