@@ -1,9 +1,14 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
-import { Sparkles, Target, Lightbulb, Zap, Users, Globe, Rocket, ArrowRight } from "lucide-react"
+import { FeatureCard } from "@/components/ui/grid-feature-cards"
+import { CircularTestimonials } from "@/components/ui/circular-testimonials"
+import { Sparkles, Target, Lightbulb, Zap, Users, Globe, Rocket, ArrowRight, Heart, Shield, Star } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function AboutPage() {
   return (
@@ -12,8 +17,17 @@ export default function AboutPage() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-card/30">
         <div className="mx-auto max-w-7xl">
           <div className="text-center max-w-4xl mx-auto">
-            <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">À propos d'ORION</Badge>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#0077B6] tracking-wider">À PROPOS D'ORION</span>
+              </div>
+            </div>
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
               Une constellation qui guide la jeunesse vers l'avenir
             </h1>
             <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
@@ -29,11 +43,19 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 mb-6">
-                <Sparkles className="h-5 w-5 text-primary" />
-                <span className="text-sm font-medium text-primary">Notre histoire</span>
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-[#0077B6] tracking-wider">NOTRE HISTOIRE</span>
+                </div>
               </div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">Pourquoi ORION ?</h2>
+              <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
+                Pourquoi ORION ?
+              </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   ORION tire son nom de la constellation la plus reconnaissable dans le ciel nocturne. Depuis des
@@ -52,25 +74,14 @@ export default function AboutPage() {
             </div>
 
             <div className="relative">
-              <Card className="overflow-hidden border-primary/20">
-                <div className="aspect-square bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <Sparkles className="h-32 w-32 text-primary/40" />
-                  </div>
-                  {/* Constellation dots */}
-                  <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-primary rounded-full star-twinkle" />
-                  <div
-                    className="absolute top-1/3 right-1/3 w-2 h-2 bg-secondary rounded-full star-twinkle"
-                    style={{ animationDelay: "1s" }}
+              <Card className="overflow-hidden border-[#0077B6]/20 p-0">
+                <div className="aspect-square relative">
+                  <img
+                    src="/young.jpg"
+                    alt="Jeunes guinéens unis pour l'avenir"
+                    className="w-full h-full object-cover"
                   />
-                  <div
-                    className="absolute bottom-1/3 left-1/3 w-2.5 h-2.5 bg-accent rounded-full star-twinkle"
-                    style={{ animationDelay: "2s" }}
-                  />
-                  <div
-                    className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-primary/60 rounded-full star-twinkle"
-                    style={{ animationDelay: "0.5s" }}
-                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0077B6]/20 via-transparent to-transparent" />
                 </div>
               </Card>
             </div>
@@ -78,118 +89,121 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
-        <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Nos valeurs fondamentales</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Trois piliers qui guident chacune de nos actions
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 bg-card border-border">
-              <div className="mb-6 inline-flex p-4 rounded-2xl bg-primary/10">
-                <Target className="h-10 w-10 text-primary" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Unité</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Rassembler les talents et les énergies pour créer une communauté forte et solidaire.
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Nous croyons que la force collective dépasse toujours les efforts individuels. Ensemble, nous sommes
-                plus forts.
-              </p>
-            </Card>
-
-            <Card className="p-8 bg-card border-border">
-              <div className="mb-6 inline-flex p-4 rounded-2xl bg-secondary/10">
-                <Lightbulb className="h-10 w-10 text-secondary" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Inspiration</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Donner confiance et ouvrir des perspectives pour révéler le potentiel de chacun.
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Chaque jeune possède un talent unique. Notre rôle est de l'aider à le découvrir et à le développer.
-              </p>
-            </Card>
-
-            <Card className="p-8 bg-card border-border">
-              <div className="mb-6 inline-flex p-4 rounded-2xl bg-accent/10">
-                <Zap className="h-10 w-10 text-accent" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Action</h3>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Passer des idées aux réalisations concrètes qui transforment notre avenir.
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Les rêves sans action restent des rêves. Nous transformons les idées en projets tangibles et impactants.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Vision Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Notre vision</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <AnimatedContainer className="mx-auto max-w-3xl text-center">
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#0077B6] tracking-wider">NOTRE VISION</span>
+              </div>
+            </div>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
+              Notre vision
+            </h2>
+            <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
               Construire un avenir où chaque jeune peut réaliser son plein potentiel
             </p>
-          </div>
+          </AnimatedContainer>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-6 bg-gradient-to-br from-primary/5 to-transparent border-primary/20">
-              <Users className="h-8 w-8 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Communauté</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Créer un réseau solide de jeunes leaders, entrepreneurs et créateurs qui s'entraident et grandissent
-                ensemble.
-              </p>
-            </Card>
-
-            <Card className="p-6 bg-gradient-to-br from-secondary/5 to-transparent border-secondary/20">
-              <Globe className="h-8 w-8 text-secondary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Impact global</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Étendre notre influence au-delà des frontières pour toucher et transformer des vies à travers le monde
-                entier.
-              </p>
-            </Card>
-
-            <Card className="p-6 bg-gradient-to-br from-accent/5 to-transparent border-accent/20">
-              <Rocket className="h-8 w-8 text-accent mb-4" />
-              <h3 className="text-xl font-bold mb-3">Innovation</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                Encourager la créativité et l'innovation pour résoudre les défis de demain avec des solutions
-                audacieuses.
-              </p>
-            </Card>
-          </div>
+          <AnimatedContainer
+            delay={0.4}
+            className="grid grid-cols-1 divide-x divide-y divide-dashed border border-dashed border-[#0077B6]/20 sm:grid-cols-2 md:grid-cols-3"
+          >
+            {[
+              {
+                title: 'Communauté',
+                icon: Users,
+                description: 'Créer un réseau solide de jeunes leaders, entrepreneurs et créateurs qui s\'entraident et grandissent ensemble.',
+              },
+              {
+                title: 'Impact global',
+                icon: Globe,
+                description: 'Étendre notre influence au-delà des frontières pour toucher et transformer des vies à travers le monde entier.',
+              },
+              {
+                title: 'Innovation',
+                icon: Rocket,
+                description: 'Encourager la créativité et l\'innovation pour résoudre les défis de demain avec des solutions audacieuses.',
+              },
+            ].map((feature, i) => (
+              <FeatureCard key={i} feature={feature} />
+            ))}
+          </AnimatedContainer>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance">Rejoignez le mouvement ORION</h2>
-          <p className="text-lg text-muted-foreground mb-8 text-pretty">
-            Ensemble, transformons l'énergie collective en opportunités concrètes
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-              <Link href="/contact">
-                Nous contacter
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="border-border hover:bg-muted bg-transparent">
-              <Link href="/projects">Découvrir nos projets</Link>
-            </Button>
+      {/* Team Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
+        <div className="mx-auto max-w-7xl">
+          <AnimatedContainer className="mx-auto max-w-3xl text-center mb-16">
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#0077B6] tracking-wider">NOTRE ÉQUIPE</span>
+              </div>
+            </div>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
+              Brève présentation de l'équipe fondatrice
+            </h2>
+            <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
+              Des leaders passionnés qui portent la vision d'ORION
+            </p>
+          </AnimatedContainer>
+
+          <div className="flex justify-center">
+            <CircularTestimonials
+              testimonials={[
+                {
+                  quote: "Nous croyons que la jeunesse guinéenne a un potentiel extraordinaire. Notre mission est de créer les conditions pour qu'elle puisse s'épanouir et transformer notre société.",
+                  name: "Mamadouba Youla",
+                  designation: "Fondateur & CEO",
+                  src: "/you.jpg",
+                },
+                {
+                  quote: "L'innovation commence par l'éducation et la formation. Nous accompagnons chaque jeune dans la découverte et le développement de ses talents uniques.",
+                  name: "Mamadouba Youla",
+                  designation: "Directeur de l'Innovation",
+                  src: "/you.jpg",
+                },
+                {
+                  quote: "La culture et le sport sont des leviers puissants pour rassembler les communautés. Nous créons des espaces où chacun peut s'exprimer et grandir.",
+                  name: "Mamadouba Youla",
+                  designation: "Directeur des Projets Culturels",
+                  src: "/you.jpg",
+                },
+                {
+                  quote: "Notre impact se mesure par les vies que nous transformons. Chaque projet d'ORION vise à créer un changement durable et positif.",
+                  name: "Mamadouba Youla",
+                  designation: "Directeur de l'Impact Social",
+                  src: "/you.jpg",
+                },
+              ]}
+              autoplay={true}
+              colors={{
+                name: "#0077B6",
+                designation: "#00B4D8",
+                testimony: "#374151",
+                arrowBackground: "#0077B6",
+                arrowForeground: "#ffffff",
+                arrowHoverBackground: "#00B4D8",
+              }}
+              fontSizes={{
+                name: "28px",
+                designation: "18px",
+                quote: "18px",
+              }}
+            />
           </div>
         </div>
       </section>
@@ -197,4 +211,24 @@ export default function AboutPage() {
       <Footer />
     </main>
   )
+}
+
+type ViewAnimationProps = {
+	delay?: number;
+	className?: React.ComponentProps<typeof motion.div>['className'];
+	children: React.ReactNode;
+};
+
+function AnimatedContainer({ className, delay = 0.1, children }: ViewAnimationProps) {
+	return (
+		<motion.div
+			initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
+			whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
+			viewport={{ once: true }}
+			transition={{ delay, duration: 0.8 }}
+			className={className}
+		>
+			{children}
+		</motion.div>
+	);
 }
