@@ -1,9 +1,13 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
-import { Leaf, Flame, GraduationCap, ArrowRight, CheckCircle2 } from "lucide-react"
+import { FeatureCard } from "@/components/ui/grid-feature-cards"
+import { Leaf, Flame, GraduationCap, ArrowRight, CheckCircle2, Users, Calendar, TrendingUp } from "lucide-react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 export default function ProjectsPage() {
   return (
@@ -11,11 +15,20 @@ export default function ProjectsPage() {
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-card/30">
         <div className="mx-auto max-w-7xl text-center">
-          <Badge className="mb-6 bg-primary/10 text-primary border-primary/20">Nos initiatives</Badge>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-balance">
+          <div className="relative mb-8">
+            <div className="inline-flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+              </div>
+              <span className="text-base font-bold text-[#0077B6] tracking-wider">NOS INITIATIVES</span>
+            </div>
+          </div>
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
             Projets qui transforment l'avenir
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+          <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
             Découvrez nos initiatives qui unissent innovation, culture et sport pour créer des opportunités concrètes
             pour la jeunesse
           </p>
@@ -27,12 +40,18 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Leaf className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-primary">Innovation & Durabilité</span>
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-[#0077B6] tracking-wider">INNOVATION & DURABILITÉ</span>
+                </div>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Grainy</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Grainy</h2>
               <p className="text-lg font-medium text-primary mb-6">Moins de gaspillage, plus d'avenir</p>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -65,9 +84,13 @@ export default function ProjectsPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <Card className="overflow-hidden border-primary/20">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-accent/20 relative">
-                  <div className="absolute inset-0 bg-[url('/sustainable-innovation-technology.jpg')] bg-cover bg-center opacity-60" />
+              <Card className="overflow-hidden border-[#0077B6]/20 p-0">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/sustainable-innovation-technology.jpg"
+                    alt="Innovation durable et technologie verte"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Card>
             </div>
@@ -80,20 +103,30 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Card className="overflow-hidden border-secondary/20">
-                <div className="aspect-[4/3] bg-gradient-to-br from-secondary/20 to-primary/20 relative">
-                  <div className="absolute inset-0 bg-[url('/basketball-3x3-street-sports-energy.jpg')] bg-cover bg-center opacity-60" />
+              <Card className="overflow-hidden border-[#00B4D8]/20 p-0">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/basketball-3x3-street-sports-energy.jpg"
+                    alt="Tournoi de basketball 3x3 Streetfire"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Card>
             </div>
 
             <div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 border border-secondary/20 mb-6">
-                <Flame className="h-4 w-4 text-secondary" />
-                <span className="text-sm font-medium text-secondary">Sport & Énergie collective</span>
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-[#00B4D8] tracking-wider">SPORT & ÉNERGIE COLLECTIVE</span>
+                </div>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Streetfire 3x3</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Streetfire 3x3</h2>
               <p className="text-lg font-medium text-secondary mb-6">Plus qu'un tournoi, un mouvement</p>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -133,12 +166,18 @@ export default function ProjectsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6">
-                <GraduationCap className="h-4 w-4 text-accent" />
-                <span className="text-sm font-medium text-accent">Formation & Leadership</span>
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-[#0077B6] tracking-wider">FORMATION & LEADERSHIP</span>
+                </div>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4">Formation & Masterclass</h2>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Formation & Masterclass</h2>
               <p className="text-lg font-medium text-accent mb-6">Former les champions leaders de demain</p>
 
               <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -171,9 +210,13 @@ export default function ProjectsPage() {
             </div>
 
             <div className="order-1 lg:order-2">
-              <Card className="overflow-hidden border-accent/20">
-                <div className="aspect-[4/3] bg-gradient-to-br from-accent/20 to-secondary/20 relative">
-                  <div className="absolute inset-0 bg-[url('/leadership-training-education-mentorship.jpg')] bg-cover bg-center opacity-60" />
+              <Card className="overflow-hidden border-[#0077B6]/20 p-0">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/leadership-training-education-mentorship.jpg"
+                    alt="Formation et développement du leadership"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </Card>
             </div>
@@ -182,36 +225,58 @@ export default function ProjectsPage() {
       </section>
 
       {/* Impact Stats */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4">Notre impact</h2>
-            <p className="text-lg text-muted-foreground">Des résultats concrets qui transforment des vies</p>
+          <div className="text-center mb-16">
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#0077B6] tracking-wider">NOTRE IMPACT</span>
+              </div>
+            </div>
+            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
+              Notre impact
+            </h2>
+            <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
+              Des résultats concrets qui transforment des vies
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 text-center bg-card border-border">
-              <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">500+</div>
-              <p className="text-muted-foreground">Jeunes accompagnés</p>
-            </Card>
-
-            <Card className="p-8 text-center bg-card border-border">
-              <div className="text-4xl sm:text-5xl font-bold text-secondary mb-2">15+</div>
-              <p className="text-muted-foreground">Projets lancés</p>
-            </Card>
-
-            <Card className="p-8 text-center bg-card border-border">
-              <div className="text-4xl sm:text-5xl font-bold text-accent mb-2">10+</div>
-              <p className="text-muted-foreground">Villes touchées</p>
-            </Card>
-          </div>
+          <AnimatedContainer
+            delay={0.4}
+            className="grid grid-cols-1 divide-x divide-y divide-dashed border border-dashed border-[#0077B6]/20 sm:grid-cols-2 md:grid-cols-3"
+          >
+            {[
+              {
+                title: 'Jeunes accompagnés',
+                icon: Users,
+                description: 'Plus de 500 jeunes actifs dans notre écosystème d\'innovation et de développement',
+              },
+              {
+                title: 'Projets lancés',
+                icon: TrendingUp,
+                description: 'Plus de 15 initiatives concrètes qui transforment les communautés guinéennes',
+              },
+              {
+                title: 'Villes touchées',
+                icon: Calendar,
+                description: 'Plus de 10 villes où nous avons créé un impact durable et positif',
+              },
+            ].map((feature, i) => (
+              <FeatureCard key={i} feature={feature} />
+            ))}
+          </AnimatedContainer>
         </div>
       </section>
 
       {/* CTA */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance">Vous avez un projet en tête ?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Vous avez un projet en tête ?</h2>
           <p className="text-lg text-muted-foreground mb-8 text-pretty">
             Rejoignez ORION et transformons ensemble vos idées en réalité
           </p>
@@ -227,4 +292,24 @@ export default function ProjectsPage() {
       <Footer />
     </main>
   )
+}
+
+type ViewAnimationProps = {
+	delay?: number;
+	className?: React.ComponentProps<typeof motion.div>['className'];
+	children: React.ReactNode;
+};
+
+function AnimatedContainer({ className, delay = 0.1, children }: ViewAnimationProps) {
+	return (
+		<motion.div
+			initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
+			whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
+			viewport={{ once: true }}
+			transition={{ delay, duration: 0.8 }}
+			className={className}
+		>
+			{children}
+		</motion.div>
+	);
 }
