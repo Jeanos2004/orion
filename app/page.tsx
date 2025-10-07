@@ -378,7 +378,7 @@ export default function HomePage() {
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start lg:items-center">
             {/* Partie texte à gauche */}
             <div className="text-center lg:text-left">
               <div className="relative mb-8">
@@ -420,7 +420,7 @@ export default function HomePage() {
             </div>
 
             {/* Partie image circulaire à droite */}
-            <div className="flex justify-center lg:justify-end">
+            <div className="flex justify-center lg:justify-end lg:pt-16">
               <div className="w-96 h-96 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
                 <div 
                   className="w-full h-full bg-cover bg-center"
