@@ -63,93 +63,73 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Mission Section - Ultra innovative bento grid layout */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+       {/* Mission Section - Ultra innovative bento grid layout */}
+       <section className="py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0">
           <div
-            className="absolute inset-0 opacity-10"
+             className="absolute inset-0 opacity-5"
             style={{
               backgroundImage: "radial-gradient(circle, #0077B6 1px, transparent 1px)",
-              backgroundSize: "30px 30px",
+               backgroundSize: "40px 40px",
             }}
           />
         </div>
 
         <div className="mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0077B6]/10 border border-[#0077B6]/20 mb-6">
-              <Target className="h-4 w-4 text-[#0077B6]" />
-              <span className="text-sm font-semibold text-[#0077B6]">Notre mission</span>
-            </div>
-            <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance text-[#0077B6]">
+           <div className="text-center mb-24">
+             <div className="relative mb-8">
+               <div className="inline-flex items-center gap-3">
+                 <div className="flex items-center gap-2">
+                   <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                   <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                   <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                 </div>
+                 <span className="text-base font-bold text-[#0077B6] tracking-wider">NOTRE MISSION</span>
+               </div>
+             </div>
+             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
               Trois piliers, un mouvement
             </h2>
-            <p className="text-xl sm:text-2xl text-foreground/70 max-w-4xl mx-auto text-pretty leading-relaxed">
+             <p className="text-xl sm:text-2xl text-foreground/60 max-w-4xl mx-auto text-pretty leading-relaxed font-light">
               Créer un espace où les jeunes peuvent apprendre, créer, entreprendre et s'élever ensemble
             </p>
           </div>
 
-          <div className="relative max-w-5xl mx-auto">
-            <svg className="absolute inset-0 w-full h-full hidden lg:block pointer-events-none" style={{ zIndex: 0 }}>
-              {/* Connection from Unité to Inspiration - curves upward then down */}
-              <path
-                d="M 200 50 Q 280 20, 360 50"
-                stroke="url(#gradient1)"
-                strokeWidth="3"
-                fill="none"
-                strokeDasharray="8 4"
-                className="animate-dash"
-              />
-              {/* Connection from Inspiration to Action - curves downward then up */}
-              <path
-                d="M 440 50 Q 520 80, 600 50"
-                stroke="url(#gradient2)"
-                strokeWidth="3"
-                fill="none"
-                strokeDasharray="8 4"
-                className="animate-dash"
-                style={{ animationDelay: "0.5s" }}
-              />
-              <defs>
-                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#0077B6" />
-                  <stop offset="100%" stopColor="#00B4D8" />
-                </linearGradient>
-                <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stopColor="#00B4D8" />
-                  <stop offset="100%" stopColor="#0077B6" />
-                </linearGradient>
-              </defs>
-            </svg>
+           <div className="relative max-w-6xl mx-auto">
+             {/* Trois lignes d'énergie subtiles */}
+             <div className="absolute inset-0 w-full h-full hidden lg:block pointer-events-none" style={{ zIndex: 0 }}>
+               <div className="absolute top-40 left-1/4 w-1/6 h-px bg-gradient-to-r from-transparent via-[#00B4D8]/30 to-transparent animate-pulse"></div>
+               <div className="absolute top-40 left-1/2 w-1/6 h-px bg-gradient-to-r from-transparent via-[#00B4D8]/30 to-transparent animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+               <div className="absolute top-40 left-3/4 w-1/6 h-px bg-gradient-to-r from-transparent via-[#00B4D8]/30 to-transparent animate-pulse" style={{ animationDelay: "1s" }}></div>
+             </div>
 
             <svg className="absolute inset-0 w-full h-full lg:hidden pointer-events-none" style={{ zIndex: 0 }}>
-              {/* Connection from Unité to Inspiration - curves to the right then left */}
+               {/* Mobile serpentine connections */}
               <path
-                d="M 50 200 Q 80 280, 50 360"
+                 d="M 40 180 Q -20 280, 40 380 Q 100 480, 40 380"
                 stroke="url(#gradient1)"
                 strokeWidth="3"
                 fill="none"
-                strokeDasharray="8 4"
-                className="animate-dash"
+                 strokeDasharray="10 6"
+                 className="animate-dash opacity-50"
               />
-              {/* Connection from Inspiration to Action - curves to the left then right */}
               <path
-                d="M 50 440 Q 20 520, 50 600"
+                 d="M 40 380 Q -20 480, 40 580 Q 100 680, 40 580"
                 stroke="url(#gradient2)"
                 strokeWidth="3"
                 fill="none"
-                strokeDasharray="8 4"
-                className="animate-dash"
-                style={{ animationDelay: "0.5s" }}
+                 strokeDasharray="10 6"
+                 className="animate-dash opacity-50"
+                 style={{ animationDelay: "0.6s" }}
               />
             </svg>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 relative" style={{ zIndex: 1 }}>
+             <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-20 relative" style={{ zIndex: 1 }}>
               {/* Unité */}
               <div className="relative group">
                 <div className="absolute -inset-4 bg-[#0077B6]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative text-center lg:text-left">
+                <div className="relative text-center">
                   {/* Icon with pulse effect */}
                   <div className="inline-flex mb-6 relative">
                     <div className="absolute inset-0 bg-[#0077B6] rounded-full animate-ping opacity-20" />
@@ -170,7 +150,7 @@ export default function HomePage() {
                       les frontières
                     </p>
 
-                    <div className="flex items-center gap-3 text-[#0077B6] justify-center lg:justify-start pt-2">
+                    <div className="flex items-center gap-3 text-[#0077B6] justify-center pt-2">
                       <Users className="h-5 w-5" />
                       <span className="text-sm font-semibold">+500 jeunes connectés</span>
                     </div>
@@ -215,7 +195,7 @@ export default function HomePage() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-[#0077B6]/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <div className="relative text-center lg:text-right">
+                <div className="relative text-center">
                   {/* Icon with pulse effect */}
                   <div className="inline-flex mb-6 relative">
                     <div className="absolute inset-0 bg-[#0077B6] rounded-full animate-ping opacity-20 delay-700" />
