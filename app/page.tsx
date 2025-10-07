@@ -14,7 +14,7 @@ export default function HomePage() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: "url('/young-guinean-youth-collaboration-innovation.jpg')",
+            backgroundImage: "url('/young.jpg')",
             backgroundPosition: 'center 10%'
           }}
         >
@@ -239,9 +239,15 @@ export default function HomePage() {
       <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white via-[#0077B6]/5 to-white relative">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#00B4D8]/10 border border-[#00B4D8]/20 mb-6">
-              <Sparkles className="h-4 w-4 text-[#00B4D8]" />
-              <span className="text-sm font-semibold text-[#00B4D8]">Nos initiatives</span>
+            <div className="relative mb-8">
+              <div className="inline-flex items-center gap-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-pulse"></div>
+                  <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-bounce"></div>
+                  <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-ping"></div>
+                </div>
+                <span className="text-base font-bold text-[#00B4D8] tracking-wider">NOS INITIATIVES</span>
+              </div>
             </div>
             <h2 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-8 text-balance text-[#00B4D8]">
               Projets phares
@@ -253,7 +259,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Grainy */}
-            <Card className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#0077B6]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#0077B6]/30">
+            <Card className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#0077B6]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#0077B6]/30 flex flex-col p-0">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src="/sustainable-innovation-technology.jpg"
@@ -272,8 +278,8 @@ export default function HomePage() {
                   <p className="text-sm text-white/90 font-medium uppercase tracking-wider">Innovation & Durabilité</p>
                 </div>
               </div>
-              <div className="p-8">
-                <p className="text-foreground/70 mb-6 leading-relaxed text-lg">
+              <div className="p-8 flex flex-col flex-grow">
+                <p className="text-foreground/70 mb-6 leading-relaxed text-lg flex-grow">
                   Moins de gaspillage, plus d'avenir. Transformer les déchets en opportunités.
                 </p>
                 <Button
@@ -289,7 +295,7 @@ export default function HomePage() {
             </Card>
 
             {/* Streetfire 3x3 */}
-            <Card className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#00B4D8]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#00B4D8]/30">
+            <Card className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#00B4D8]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#00B4D8]/30 flex flex-col p-0">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src="/basketball-3x3-street-sports-energy.jpg"
@@ -308,8 +314,8 @@ export default function HomePage() {
                   <p className="text-sm text-white/90 font-medium uppercase tracking-wider">Sport & Énergie</p>
                 </div>
               </div>
-              <div className="p-8">
-                <p className="text-foreground/70 mb-6 leading-relaxed text-lg">
+              <div className="p-8 flex flex-col flex-grow">
+                <p className="text-foreground/70 mb-6 leading-relaxed text-lg flex-grow">
                   Plus qu'un tournoi, un mouvement qui unit la jeunesse par le sport.
                 </p>
                 <Button
@@ -325,7 +331,7 @@ export default function HomePage() {
             </Card>
 
             {/* Formation */}
-            <Card className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#0077B6]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#0077B6]/30">
+            <Card className="overflow-hidden group cursor-pointer hover:shadow-2xl hover:shadow-[#0077B6]/20 transition-all duration-500 hover:scale-[1.03] bg-white border-2 border-transparent hover:border-[#0077B6]/30 flex flex-col p-0">
               <div className="aspect-[4/3] relative overflow-hidden">
                 <Image
                   src="/leadership-training-education-mentorship.jpg"
@@ -346,8 +352,8 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
-              <div className="p-8">
-                <p className="text-foreground/70 mb-6 leading-relaxed text-lg">
+              <div className="p-8 flex flex-col flex-grow">
+                <p className="text-foreground/70 mb-6 leading-relaxed text-lg flex-grow">
                   Former les leaders de demain avec des compétences concrètes et durables.
                 </p>
                 <Button
