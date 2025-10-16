@@ -2,37 +2,56 @@
 
 import type React from "react"
 
-import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
 import { Footer } from "@/components/footer"
-import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Mail, MessageSquare, Send, Sparkles, HelpCircle } from "lucide-react"
-import { useState } from "react"
+import { Mail, MessageSquare } from "lucide-react"
+import { useEffect } from "react"
+
+// Déclaration des types pour HubSpot
+declare global {
+  interface Window {
+    hbspt: {
+      forms: {
+        create: (options: {
+          portalId: string;
+          formId: string;
+          region: string;
+          target?: string;
+        }) => void;
+      };
+    };
+  }
+}
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
+  useEffect(() => {
+    // Charger le script HubSpot
+    const script = document.createElement('script');
+    script.src = '//js-eu1.hsforms.net/forms/embed/v2.js';
+    script.charset = 'utf-8';
+    script.type = 'text/javascript';
+    document.head.appendChild(script);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    script.onload = () => {
+      // Créer le formulaire HubSpot une fois le script chargé
+      if (window.hbspt) {
+        window.hbspt.forms.create({
+          portalId: "146719237",
+          formId: "e6c105a6-6c52-4fc8-a199-d2f670036e53",
+          region: "eu1",
+          target: "#hubspot-form"
+        });
+      }
+    };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
-  }
+    return () => {
+      // Nettoyer le script lors du démontage du composant
+      if (document.head.contains(script)) {
+        document.head.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <main className="min-h-screen">
@@ -125,69 +144,8 @@ export default function ContactPage() {
                 <h3 className="text-2xl font-bold mb-2 text-[#0077B6]">Envoyez-nous un message</h3>
                 <p className="text-foreground/70">Nous vous répondrons dans les plus brefs délais</p>
               </div>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="space-y-2">
-                  <Label htmlFor="name" className="text-[#0077B6] font-semibold">Nom complet</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    placeholder="Votre nom"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-background border-[#0077B6]/30 focus:border-[#0077B6] focus:ring-[#0077B6]/20 rounded-full h-12"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-[#0077B6] font-semibold">Email</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    placeholder="votre@email.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-background border-[#0077B6]/30 focus:border-[#0077B6] focus:ring-[#0077B6]/20 rounded-full h-12"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-[#0077B6] font-semibold">Sujet</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    placeholder="De quoi souhaitez-vous parler ?"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="bg-background border-[#0077B6]/30 focus:border-[#0077B6] focus:ring-[#0077B6]/20 rounded-full h-12"
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="message" className="text-[#0077B6] font-semibold">Message</Label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    placeholder="Parlez-nous de votre projet ou de vos questions..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={6}
-                    className="bg-background border-[#0077B6]/30 focus:border-[#0077B6] focus:ring-[#0077B6]/20 resize-none rounded-xl"
-                  />
-                </div>
-
-                <Button 
-                  type="submit" 
-                  className="w-full bg-[#0077B6] hover:bg-[#0077B6]/90 text-white h-14 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl hover:shadow-[#0077B6]/30 transition-all hover:scale-105"
-                >
-                  Envoyer le message
-                  <Send className="ml-2 h-5 w-5" />
-                </Button>
-              </form>
+              {/* Conteneur pour le formulaire HubSpot */}
+              <div id="hubspot-form" className="hubspot-form-container"></div>
             </Card>
           </div>
         </div>
