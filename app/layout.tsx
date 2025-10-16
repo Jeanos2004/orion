@@ -11,6 +11,14 @@ export const metadata: Metadata = {
   title: "ORION - Unir, inspirer, agir",
   description: "Une plateforme qui fédère la jeunesse autour de projets innovants, culturels et sportifs",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
 }
 
 export default function RootLayout({
@@ -20,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={<div>Loading...</div>}>
           <Navigation />

@@ -1,0 +1,22 @@
+{
+  "name": "ORION - Unir, inspirer, agir",
+  "short_name": "ORION",
+  "description": "Une plateforme qui fédère la jeunesse autour de projets innovants, culturels et sportifs",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0077B6",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ]
+}
