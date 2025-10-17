@@ -293,7 +293,7 @@ export const CircularTestimonials = ({
           width: 100%;
           height: 100%;
           object-fit: cover;
-          object-position: center;
+          object-position: center top;
           border-radius: 1.5rem;
           box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }

@@ -166,27 +166,21 @@ export default function AboutPage() {
               testimonials={[
                 {
                   quote: "Nous croyons que la jeunesse guinéenne a un potentiel extraordinaire. Notre mission est de créer les conditions pour qu'elle puisse s'épanouir et transformer notre société.",
-                  name: "Mamadouba Youla",
-                  designation: "Fondateur & CEO",
-                  src: "/you.jpg",
+                  name: "Mohamed Bah",
+                  designation: "Gérant Cofondateur",
+                  src: "/bah.png",
                 },
                 {
                   quote: "L'innovation commence par l'éducation et la formation. Nous accompagnons chaque jeune dans la découverte et le développement de ses talents uniques.",
-                  name: "Mamadouba Youla",
-                  designation: "Directeur de l'Innovation",
-                  src: "/you.jpg",
+                  name: "Sekou Fofana",
+                  designation: "Co Gérant Cofondateur",
+                  src: "/bah.png",
                 },
                 {
                   quote: "La culture et le sport sont des leviers puissants pour rassembler les communautés. Nous créons des espaces où chacun peut s'exprimer et grandir.",
-                  name: "Mamadouba Youla",
-                  designation: "Directeur des Projets Culturels",
-                  src: "/you.jpg",
-                },
-                {
-                  quote: "Notre impact se mesure par les vies que nous transformons. Chaque projet d'ORION vise à créer un changement durable et positif.",
-                  name: "Mamadouba Youla",
-                  designation: "Directeur de l'Impact Social",
-                  src: "/you.jpg",
+                  name: "Amadou Bah",
+                  designation: "Cofondateur",
+                  src: "/reuf.png",
                 },
               ]}
               autoplay={true}

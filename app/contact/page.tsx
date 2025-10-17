@@ -5,7 +5,7 @@ import type React from "react"
 import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Mail, MessageSquare } from "lucide-react"
+import { Mail, MessageSquare, Instagram, Twitter, Linkedin } from "lucide-react"
 import { useEffect } from "react"
 
 // Déclaration des types pour HubSpot
@@ -110,8 +110,8 @@ export default function ContactPage() {
                       <Mail className="h-6 w-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-sm text-muted-foreground">contact@orion-platform.com</p>
+                      <h3 className="font-semibold mb-1">Adresse email</h3>
+                      <p className="text-sm text-muted-foreground">contact@orionguinee.com</p>
                     </div>
                   </div>
                 </Card>
@@ -122,14 +122,37 @@ export default function ContactPage() {
                       <MessageSquare className="h-6 w-6 text-secondary" />
                     </div>
                     <div>
-                      <h3 className="font-semibold mb-1">Réseaux sociaux</h3>
-                      <p className="text-sm text-muted-foreground">#UnirInspirerAgir</p>
+                      <h3 className="font-semibold mb-1">Téléphone</h3>
+                      <p className="text-sm text-muted-foreground">629078819</p>
                     </div>
                   </div>
                 </Card>
               </div>
 
               <div className="mt-8 p-6 rounded-2xl bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 border border-border">
+                <h3 className="font-semibold mb-4">Réseaux sociaux</h3>
+                <div className="flex items-center gap-4">
+                  <span className="text-sm text-muted-foreground font-medium">Suivez-nous :</span>
+                  <div className="flex gap-3">
+                    {[
+                      { icon: Instagram, href: "https://www.instagram.com/orion_guinee?igsh=dmJoNjNicGViNXpj&utm_source=qr", label: "Instagram" },
+                      { icon: Twitter, href: "https://x.com/orionguinee?s=21", label: "Twitter" },
+                      { icon: Linkedin, href: "#", label: "LinkedIn" }
+                    ].map(({ icon: Icon, href, label }) => (
+                      <a
+                        key={label}
+                        href={href}
+                        className="w-10 h-10 rounded-full bg-primary/10 backdrop-blur-md border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/20 hover:scale-110 transition-all duration-300"
+                        aria-label={label}
+                      >
+                        <Icon className="h-5 w-5" />
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 p-6 rounded-2xl bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 border border-border">
                 <h3 className="font-semibold mb-2">Vous êtes une organisation ?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Nous sommes ouverts aux partenariats avec des entreprises, ONG et institutions qui partagent notre

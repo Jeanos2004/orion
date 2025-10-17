@@ -47,8 +47,8 @@ export function Footer() {
                 <span className="text-white/80 text-sm font-medium">Suivez-nous :</span>
                 <div className="flex gap-3">
                   {[
-                    { icon: Instagram, href: "#", label: "Instagram" },
-                    { icon: Twitter, href: "#", label: "Twitter" },
+                    { icon: Instagram, href: "https://www.instagram.com/orion_guinee?igsh=dmJoNjNicGViNXpj&utm_source=qr", label: "Instagram" },
+                    { icon: Twitter, href: "https://x.com/orionguinee?s=21", label: "Twitter" },
                     { icon: Linkedin, href: "#", label: "LinkedIn" }
                   ].map(({ icon: Icon, href, label }) => (
                     <a
@@ -128,7 +128,7 @@ export function Footer() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-3 text-white/80">
                       <Mail className="h-4 w-4" />
-                      <span className="text-sm">contact@orion-guinee.org</span>
+                      <span className="text-sm">contact@orionguinee.com</span>
                     </div>
                     <div className="flex items-center gap-3 text-white/80">
                       <MapPin className="h-4 w-4" />
@@ -136,7 +136,7 @@ export function Footer() {
                     </div>
                     <div className="flex items-center gap-3 text-white/80">
                       <Phone className="h-4 w-4" />
-                      <span className="text-sm">+224 XXX XX XX XX</span>
+                      <span className="text-sm">629078819</span>
                     </div>
                   </div>
                 </div>
