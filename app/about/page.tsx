@@ -171,12 +171,6 @@ export default function AboutPage() {
                   src: "/bah.png",
                 },
                 {
-                  quote: "L'innovation commence par l'éducation et la formation. Nous accompagnons chaque jeune dans la découverte et le développement de ses talents uniques.",
-                  name: "Sekou Fofana",
-                  designation: "Co Gérant Cofondateur",
-                  src: "/bah.png",
-                },
-                {
                   quote: "La culture et le sport sont des leviers puissants pour rassembler les communautés. Nous créons des espaces où chacun peut s'exprimer et grandir.",
                   name: "Amadou Bah",
                   designation: "Cofondateur",

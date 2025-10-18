@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
 import { FeatureCard } from "@/components/ui/grid-feature-cards"
-import { Leaf, Flame, GraduationCap, ArrowRight, CheckCircle2, Users, Calendar, TrendingUp } from "lucide-react"
+import { Leaf, Flame, GraduationCap, ArrowRight, CheckCircle2, Users, Calendar, TrendingUp, Trophy } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -76,8 +76,8 @@ export default function ProjectsPage() {
               </div>
 
               <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="/contact">
-                  Participer à Grainy
+                <Link href="/projects/grainy">
+                  Détails
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -93,6 +93,69 @@ export default function ProjectsPage() {
                   />
                 </div>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Football Kagbelen Project */}
+      <section id="football-kagbelen" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30 scroll-mt-20">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Card className="overflow-hidden border-[#0077B6]/20 p-0">
+                <div className="aspect-[4/3] relative">
+                  <img
+                    src="/soccer.jpg"
+                    alt="Tournoi Inter-Secteur de Football de Kagbelen Plateau"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </Card>
+            </div>
+
+            <div>
+              <div className="relative mb-8">
+                <div className="inline-flex items-center gap-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                    <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+                  </div>
+                  <span className="text-base font-bold text-[#0077B6] tracking-wider">SPORT & COHÉSION SOCIALE</span>
+                </div>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Tournoi Inter-Secteur de Football</h2>
+              <p className="text-lg font-medium text-primary mb-6">Kagbelen Plateau — Édition 2025</p>
+
+              <p className="text-muted-foreground mb-6 leading-relaxed">
+                Un événement citoyen et communautaire qui rassemble la jeunesse autour des valeurs de solidarité, 
+                respect et unité. Huit équipes des différents secteurs s'affronteront du 17 au 29 novembre 2025 
+                dans un esprit de fair-play et de fraternité.
+              </p>
+
+              <div className="space-y-3 mb-8">
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-muted-foreground">Promouvoir la cohésion sociale et l'unité communautaire</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-muted-foreground">Révéler les jeunes talents sportifs du quartier</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                  <p className="text-muted-foreground">Sensibiliser aux valeurs citoyennes et au respect</p>
+                </div>
+              </div>
+
+              <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                <Link href="/projects/football-kagbelen">
+                  Détails
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -151,8 +214,8 @@ export default function ProjectsPage() {
               </div>
 
               <Button asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
-                <Link href="/contact">
-                  Rejoindre Streetfire
+                <Link href="/projects/streetfire">
+                  Détails
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
