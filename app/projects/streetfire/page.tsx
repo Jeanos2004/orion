@@ -282,7 +282,7 @@ export default function StreetFirePage() {
                   <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center shadow-lg">
                     <span className="text-2xl font-bold text-white">2</span>
                   </div>
-                </div>
+              </div>
                 <div className="flex-1 pl-8">
                   <div className="inline-block p-6 rounded-2xl bg-gradient-to-br from-[#0077B6]/10 to-[#0077B6]/5 border border-[#0077B6]/20">
                     <h3 className="text-xl font-bold mb-3 text-[#0077B6]">Phase 2 : Finale</h3>
