@@ -103,6 +103,7 @@ export function Footer() {
                     {[
                       { href: "/projects#grainy", label: "Grainy" },
                       { href: "/projects#streetfire", label: "Streetfire 3x3" },
+                      { href: "/projects#football-kagbelen", label: "Football Kagbelen" },
                       { href: "/projects#formation", label: "Formation" },
                       { href: "/projects", label: "Voir tous" }
                     ].map(({ href, label }) => (

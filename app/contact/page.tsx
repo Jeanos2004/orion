@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Mail, MessageSquare, Instagram, Twitter, Linkedin } from "lucide-react"
 import { useEffect } from "react"
+import Link from "next/link"
 
 // Déclaration des types pour HubSpot
 declare global {
@@ -221,7 +222,11 @@ export default function ContactPage() {
                 {
                   id: 'item-4',
                   question: 'Quels sont les projets actuellement disponibles ?',
-                  answer: 'ORION propose plusieurs initiatives : Grainy (innovation et durabilité), Streetfire 3x3 (sport et énergie collective), des programmes de formation au leadership, et des événements culturels. Consultez notre page projets pour découvrir toutes nos initiatives.',
+                  answer: (
+                    <span>
+                      ORION propose plusieurs initiatives : <Link href="/projects/grainy" className="font-bold text-[#0077B6] hover:text-[#00B4D8] transition-colors">Grainy</Link> (innovation et durabilité), <Link href="/projects/streetfire" className="font-bold text-[#0077B6] hover:text-[#00B4D8] transition-colors">Streetfire 3x3</Link> (sport et énergie collective), <Link href="/projects/football-kagbelen" className="font-bold text-[#0077B6] hover:text-[#00B4D8] transition-colors">Tournoi Inter-Secteur de Football</Link> (sport et cohésion sociale), des programmes de formation au leadership, et des événements culturels. Consultez notre page projets pour découvrir toutes nos initiatives.
+                    </span>
+                  ),
                 },
                 {
                   id: 'item-5',

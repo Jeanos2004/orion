@@ -264,11 +264,9 @@ export default function ProjectsPage() {
                 </div>
               </div>
 
-              <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Link href="/contact">
-                  S'inscrire aux formations
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              <Button className="bg-accent/50 text-accent-foreground cursor-not-allowed">
+                À venir bientôt
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
 

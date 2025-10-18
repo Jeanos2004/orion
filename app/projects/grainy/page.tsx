@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Leaf, Smartphone, Users, Target, TrendingUp, CheckCircle2, DollarSign, Globe, Zap } from "lucide-react"
+import { ArrowRight, Leaf, Smartphone, Users, Target, TrendingUp, CheckCircle2, DollarSign, Globe, Zap, Sparkles, Heart } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
@@ -70,7 +70,7 @@ export default function GrainyPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Section - Redesign innovant */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -92,41 +92,68 @@ export default function GrainyPage() {
             </p>
           </div>
 
+          {/* Design innovant avec des éléments flottants */}
+          <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <Target className="h-8 w-8 text-[#0077B6]" />
+              {/* Économie circulaire */}
+              <motion.div 
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative p-8 text-center bg-white/80 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Target className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#0077B6]">Économie circulaire</h3>
+                  <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">Économie circulaire</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Grainy agit comme un écosystème circulaire qui valorise les surplus et réduit les déchets
               </p>
-            </Card>
+                </div>
+              </motion.div>
 
-            <Card className="p-8 text-center bg-white border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
-              <div className="w-16 h-16 rounded-full bg-[#00B4D8]/10 flex items-center justify-center mx-auto mb-6">
-                <Leaf className="h-8 w-8 text-[#00B4D8]" />
+              {/* Impact environnemental */}
+              <motion.div 
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-[#0077B6]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative p-8 text-center bg-white/80 backdrop-blur-sm rounded-3xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Leaf className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#00B4D8]">Impact environnemental</h3>
+                  <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Impact environnemental</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Réduction significative du gaspillage alimentaire et de l'empreinte carbone
               </p>
-            </Card>
+                </div>
+              </motion.div>
 
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-[#0077B6]" />
+              {/* Solidarité locale */}
+              <motion.div 
+                className="relative group"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div className="relative p-8 text-center bg-white/80 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                    <Users className="h-10 w-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#0077B6]">Solidarité locale</h3>
+                  <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">Solidarité locale</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Renforcement des liens communautaires et accès à une alimentation de qualité
               </p>
-            </Card>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Fonctionnement Section */}
+      {/* Fonctionnement Section - Design moderne */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -145,41 +172,70 @@ export default function GrainyPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-[#0077B6] flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">1</span>
-              </div>
-              <h3 className="text-xl font-bold mb-4 text-[#0077B6]">Publication des invendus</h3>
+          {/* Timeline moderne */}
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#0077B6] to-[#00B4D8] rounded-full"></div>
+            
+            <div className="space-y-16">
+              {/* Étape 1 */}
+              <div className="flex items-center gap-8">
+                <div className="flex-1 text-right pr-8">
+                  <div className="inline-block p-6 rounded-2xl bg-gradient-to-br from-[#0077B6]/10 to-[#0077B6]/5 border border-[#0077B6]/20">
+                    <h3 className="text-xl font-bold mb-3 text-[#0077B6]">Publication des invendus</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Les professionnels publient leurs repas invendus via un tableau de bord simple et rapide
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-[#00B4D8] flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">1</span>
+                  </div>
+                </div>
+                <div className="flex-1 pl-8"></div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-[#00B4D8]">Géolocalisation et réservation</h3>
+
+              {/* Étape 2 */}
+              <div className="flex items-center gap-8">
+                <div className="flex-1 pr-8"></div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">2</span>
+                  </div>
+                </div>
+                <div className="flex-1 pl-8">
+                  <div className="inline-block p-6 rounded-2xl bg-gradient-to-br from-[#00B4D8]/10 to-[#00B4D8]/5 border border-[#00B4D8]/20">
+                    <h3 className="text-xl font-bold mb-3 text-[#00B4D8]">Géolocalisation et réservation</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Les utilisateurs repèrent les offres sur une carte interactive, réservent et paient en ligne
               </p>
             </div>
-
-            <div className="text-center">
-              <div className="w-20 h-20 rounded-full bg-[#0077B6] flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-white">3</span>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-[#0077B6]">Récupération</h3>
+
+              {/* Étape 3 */}
+              <div className="flex items-center gap-8">
+                <div className="flex-1 text-right pr-8">
+                  <div className="inline-block p-6 rounded-2xl bg-gradient-to-br from-[#0077B6]/10 to-[#0077B6]/5 border border-[#0077B6]/20">
+                    <h3 className="text-xl font-bold mb-3 text-[#0077B6]">Récupération</h3>
               <p className="text-muted-foreground leading-relaxed">
                 Les repas sont récupérés sur place à prix réduit avant la fermeture
               </p>
+                  </div>
+                </div>
+                <div className="relative z-10">
+                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center shadow-lg">
+                    <span className="text-2xl font-bold text-white">3</span>
+                  </div>
+                </div>
+                <div className="flex-1 pl-8"></div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Avantages Section */}
+      {/* Avantages Section - Design créatif */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -188,75 +244,88 @@ export default function GrainyPage() {
             </h2>
           </div>
 
+          {/* Design en colonnes avec effets visuels */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <Card className="p-8 bg-white border-[#0077B6]/20">
+            {/* Pour les restaurants */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#0077B6]/10 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+              <div className="relative p-8 bg-white/90 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
               <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#0077B6]/10 flex items-center justify-center">
-                  <DollarSign className="h-6 w-6 text-[#0077B6]" />
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center shadow-lg">
+                    <DollarSign className="h-7 w-7 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-[#0077B6]">Pour les restaurants</h3>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">Revenus supplémentaires</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#00B4D8]"></div>
                   <span className="text-muted-foreground">Image écoresponsable</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">Fidélisation de la clientèle</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-8 bg-white border-[#00B4D8]/20">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#00B4D8]/10 flex items-center justify-center">
-                  <Users className="h-6 w-6 text-[#00B4D8]" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#00B4D8]">Pour les consommateurs</h3>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#00B4D8] mt-0.5 flex-shrink-0" />
+            </div>
+
+            {/* Pour les consommateurs */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/5 to-[#00B4D8]/10 rounded-3xl transform -rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+              <div className="relative p-8 bg-white/90 backdrop-blur-sm rounded-3xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center shadow-lg">
+                    <Users className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#00B4D8]">Pour les consommateurs</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#00B4D8]"></div>
                   <span className="text-muted-foreground">Repas de qualité à prix abordable</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#00B4D8] mt-0.5 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">Découverte de nouveaux lieux</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#00B4D8] mt-0.5 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#00B4D8]"></div>
                   <span className="text-muted-foreground">Contribution à l'économie circulaire</span>
-                </li>
-              </ul>
-            </Card>
-
-            <Card className="p-8 bg-white border-[#0077B6]/20">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 rounded-full bg-[#0077B6]/10 flex items-center justify-center">
-                  <Globe className="h-6 w-6 text-[#0077B6]" />
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#0077B6]">Pour la société</h3>
               </div>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+            </div>
+
+            {/* Pour la société */}
+            <div className="group relative">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/5 to-[#0077B6]/10 rounded-3xl transform rotate-1 group-hover:rotate-0 transition-transform duration-500"></div>
+              <div className="relative p-8 bg-white/90 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center shadow-lg">
+                    <Globe className="h-7 w-7 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-[#0077B6]">Pour la société</h3>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">Réduction du gaspillage</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#00B4D8]"></div>
                   <span className="text-muted-foreground">Empreinte carbone allégée</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">Solidarité renforcée</span>
-                </li>
-              </ul>
-            </Card>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -273,10 +342,10 @@ export default function GrainyPage() {
                 Grainy intègre des fonctionnalités intelligentes pour optimiser l'expérience utilisateur et la performance des restaurants :
               </p>
               
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0">
-                    <Zap className="h-4 w-4 text-[#0077B6]" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 border border-[#0077B6]/10">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center flex-shrink-0">
+                    <Zap className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#0077B6] mb-1">Recommandations personnalisées</h3>
@@ -284,9 +353,9 @@ export default function GrainyPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#00B4D8]/10 flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="h-4 w-4 text-[#00B4D8]" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#00B4D8]/5 to-[#0077B6]/5 border border-[#00B4D8]/10">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center flex-shrink-0">
+                    <TrendingUp className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#00B4D8] mb-1">Analyse prédictive des invendus</h3>
@@ -294,9 +363,9 @@ export default function GrainyPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#0077B6]/10 flex items-center justify-center flex-shrink-0">
-                    <Smartphone className="h-4 w-4 text-[#0077B6]" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 border border-[#0077B6]/10">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center flex-shrink-0">
+                    <Smartphone className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#0077B6] mb-1">Reconnaissance visuelle des plats</h3>
@@ -304,9 +373,9 @@ export default function GrainyPage() {
                   </div>
                 </div>
                 
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#00B4D8]/10 flex items-center justify-center flex-shrink-0">
-                    <Leaf className="h-4 w-4 text-[#00B4D8]" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#00B4D8]/5 to-[#0077B6]/5 border border-[#00B4D8]/10">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center flex-shrink-0">
+                    <Leaf className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-[#00B4D8] mb-1">Calcul automatique</h3>
@@ -317,21 +386,24 @@ export default function GrainyPage() {
             </div>
 
             <div>
-              <Card className="overflow-hidden border-[#0077B6]/20 p-0">
-                <div className="aspect-[4/3] relative bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 flex items-center justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/20 to-[#00B4D8]/20 rounded-3xl blur-2xl"></div>
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl flex items-center justify-center border border-[#0077B6]/20">
                   <div className="text-center">
-                    <Smartphone className="h-24 w-24 text-[#0077B6] mx-auto mb-4" />
+                    <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                      <Smartphone className="h-12 w-12 text-white" />
+                    </div>
                     <h3 className="text-2xl font-bold text-[#0077B6] mb-2">Application Mobile</h3>
                     <p className="text-muted-foreground">Interface intuitive et intelligente</p>
                   </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Modèle économique Section */}
+      {/* Modèle économique Section - Design moderne */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -340,38 +412,60 @@ export default function GrainyPage() {
             </h2>
           </div>
 
+          {/* Design en grille avec effets visuels */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <DollarSign className="h-8 w-8 text-[#0077B6]" />
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-8 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <DollarSign className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-[#0077B6]">Commission</h3>
-              <p className="text-3xl font-bold text-[#0077B6] mb-2">12%</p>
+                <div className="text-4xl font-bold bg-gradient-to-r from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent mb-2">12%</div>
               <p className="text-muted-foreground">Sur chaque transaction</p>
-            </Card>
+              </div>
+            </motion.div>
 
-            <Card className="p-8 text-center bg-white border-[#00B4D8]/20">
-              <div className="w-16 h-16 rounded-full bg-[#00B4D8]/10 flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="h-8 w-8 text-[#00B4D8]" />
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-[#0077B6]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-8 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
+                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <TrendingUp className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-[#00B4D8]">Grainy Pro</h3>
-              <p className="text-3xl font-bold text-[#00B4D8] mb-2">30 000 GNF</p>
+                <div className="text-4xl font-bold bg-gradient-to-r from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent mb-2">30 000 GNF</div>
               <p className="text-muted-foreground">Abonnement mensuel</p>
-            </Card>
+              </div>
+            </motion.div>
 
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <Users className="h-8 w-8 text-[#0077B6]" />
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-8 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Users className="h-10 w-10 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-4 text-[#0077B6]">Partenariats</h3>
-              <p className="text-3xl font-bold text-[#0077B6] mb-2">+</p>
+                <div className="text-4xl font-bold bg-gradient-to-r from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent mb-2">+</div>
               <p className="text-muted-foreground">Publicitaires et services premium</p>
-            </Card>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Perspectives Section */}
+      {/* Perspectives Section - Design créatif */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -382,21 +476,21 @@ export default function GrainyPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-[#0077B6]">Objectifs de croissance</h3>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4">
+              <h3 className="text-3xl font-bold mb-8 text-[#0077B6]">Objectifs de croissance</h3>
+              <div className="space-y-6">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 border border-[#0077B6]/10">
                   <div className="w-3 h-3 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">Atteindre la rentabilité dès la 2e année</span>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#00B4D8]/5 to-[#0077B6]/5 border border-[#00B4D8]/10">
                   <div className="w-3 h-3 rounded-full bg-[#00B4D8]"></div>
                   <span className="text-muted-foreground">324 millions GNF de budget annuel</span>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 border border-[#0077B6]/10">
                   <div className="w-3 h-3 rounded-full bg-[#0077B6]"></div>
                   <span className="text-muted-foreground">99 millions GNF de revenus dès la première année</span>
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#00B4D8]/5 to-[#0077B6]/5 border border-[#00B4D8]/10">
                   <div className="w-3 h-3 rounded-full bg-[#00B4D8]"></div>
                   <span className="text-muted-foreground">+15% par mois en volume de transactions</span>
                 </div>
@@ -404,21 +498,21 @@ export default function GrainyPage() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-[#00B4D8]">Partenaires cibles</h3>
+              <h3 className="text-3xl font-bold mb-8 text-[#00B4D8]">Partenaires cibles</h3>
               <div className="grid grid-cols-2 gap-4">
-                <div className="p-4 rounded-lg bg-[#0077B6]/10">
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-[#0077B6]/10 to-[#0077B6]/5 border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-300">
                   <h4 className="font-semibold text-[#0077B6] mb-2">Institutions</h4>
                   <p className="text-sm text-muted-foreground">Ministères, collectivités locales</p>
                 </div>
-                <div className="p-4 rounded-lg bg-[#00B4D8]/10">
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-[#00B4D8]/10 to-[#00B4D8]/5 border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-300">
                   <h4 className="font-semibold text-[#00B4D8] mb-2">Opérationnels</h4>
                   <p className="text-sm text-muted-foreground">Restaurants, hôtels, boulangeries</p>
                 </div>
-                <div className="p-4 rounded-lg bg-[#0077B6]/10">
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-[#0077B6]/10 to-[#0077B6]/5 border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-300">
                   <h4 className="font-semibold text-[#0077B6] mb-2">Technologiques</h4>
                   <p className="text-sm text-muted-foreground">Développeurs, plateformes de paiement</p>
                 </div>
-                <div className="p-4 rounded-lg bg-[#00B4D8]/10">
+                <div className="p-6 rounded-2xl bg-gradient-to-br from-[#00B4D8]/10 to-[#00B4D8]/5 border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-300">
                   <h4 className="font-semibold text-[#00B4D8] mb-2">Universités & ONG</h4>
                   <p className="text-sm text-muted-foreground">Recherche et sensibilisation</p>
                 </div>
@@ -459,4 +553,3 @@ export default function GrainyPage() {
     </main>
   )
 }
-

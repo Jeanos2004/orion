@@ -72,7 +72,7 @@ export default function FootballKagbelenPage() {
         </div>
       </section>
 
-      {/* Mission Section */}
+      {/* Mission Section - Design innovant */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -94,44 +94,66 @@ export default function FootballKagbelenPage() {
             </p>
           </div>
 
+          {/* Design en grille avec effets visuels */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <Target className="h-8 w-8 text-[#0077B6]" />
+            <motion.div 
+              className="group relative"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-8 text-center bg-white/80 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Target className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">Cohésion sociale</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Renforcer l'unité communautaire à travers le sport et créer des liens durables entre 
+                  les différents secteurs de Kagbelen Plateau.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#0077B6]">Cohésion sociale</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Renforcer l'unité communautaire à travers le sport et créer des liens durables entre 
-                les différents secteurs de Kagbelen Plateau.
-              </p>
-            </Card>
+            </motion.div>
 
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <Star className="h-8 w-8 text-[#0077B6]" />
+            <motion.div 
+              className="group relative"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-[#0077B6]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-8 text-center bg-white/80 backdrop-blur-sm rounded-3xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Star className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">Révéler les talents</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Offrir un cadre d'expression et d'émulation pour les jeunes sportifs et mettre en 
+                  lumière le potentiel sportif local.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#0077B6]">Révéler les talents</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Offrir un cadre d'expression et d'émulation pour les jeunes sportifs et mettre en 
-                lumière le potentiel sportif local.
-              </p>
-            </Card>
+            </motion.div>
 
-            <Card className="p-8 text-center bg-white border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
-              <div className="w-16 h-16 rounded-full bg-[#0077B6]/10 flex items-center justify-center mx-auto mb-6">
-                <Shield className="h-8 w-8 text-[#0077B6]" />
+            <motion.div 
+              className="group relative"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-8 text-center bg-white/80 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                  <Shield className="h-10 w-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#0077B6] to-[#00B4D8] bg-clip-text text-transparent">Valeurs citoyennes</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sensibiliser la jeunesse aux valeurs citoyennes, au respect et à la discipline 
+                  à travers la pratique sportive.
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-[#0077B6]">Valeurs citoyennes</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Sensibiliser la jeunesse aux valeurs citoyennes, au respect et à la discipline 
-                à travers la pratique sportive.
-              </p>
-            </Card>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Event Details Section */}
+      {/* Event Details Section - Design moderne */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -154,35 +176,72 @@ export default function FootballKagbelenPage() {
             </p>
           </div>
 
+          {/* Design en grille avec effets visuels */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <Card className="p-6 text-center border-[#0077B6]/20">
-              <Calendar className="w-12 h-12 text-[#0077B6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Dates</h3>
-              <p className="text-muted-foreground">17 – 29 novembre 2025</p>
-            </Card>
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-6 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Calendar className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#0077B6]">Dates</h3>
+                <p className="text-muted-foreground">17 – 29 novembre 2025</p>
+              </div>
+            </motion.div>
 
-            <Card className="p-6 text-center border-[#0077B6]/20">
-              <MapPin className="w-12 h-12 text-[#0077B6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Lieu</h3>
-              <p className="text-muted-foreground">Terrain principal de Kagbelen Plateau (Conakry)</p>
-            </Card>
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-[#0077B6]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-6 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <MapPin className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#00B4D8]">Lieu</h3>
+                <p className="text-muted-foreground">Terrain principal de Kagbelen Plateau (Conakry)</p>
+              </div>
+            </motion.div>
 
-            <Card className="p-6 text-center border-[#0077B6]/20">
-              <Users className="w-12 h-12 text-[#0077B6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Équipes</h3>
-              <p className="text-muted-foreground">8 équipes des différents secteurs</p>
-            </Card>
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-6 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#0077B6]/20 hover:border-[#0077B6]/40 transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#0077B6]">Équipes</h3>
+                <p className="text-muted-foreground">8 équipes des différents secteurs</p>
+              </div>
+            </motion.div>
 
-            <Card className="p-6 text-center border-[#0077B6]/20">
-              <Trophy className="w-12 h-12 text-[#0077B6] mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Format</h3>
-              <p className="text-muted-foreground">Tournoi à élimination directe</p>
-            </Card>
+            <motion.div 
+              className="group relative"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[#00B4D8]/10 to-[#0077B6]/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+              <div className="relative p-6 text-center bg-white/90 backdrop-blur-sm rounded-3xl border border-[#00B4D8]/20 hover:border-[#00B4D8]/40 transition-all duration-500">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <Trophy className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#00B4D8]">Format</h3>
+                <p className="text-muted-foreground">Tournoi à élimination directe</p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Community Impact Section */}
+      {/* Community Impact Section - Design créatif */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6]/5 via-[#00B4D8]/5 to-[#0077B6]/5">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -212,64 +271,96 @@ export default function FootballKagbelenPage() {
                 jeunesse guinéenne, favorisant la rencontre entre jeunes, autorités locales et acteurs économiques.
               </p>
 
+              {/* Design moderne pour les points clés */}
               <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 border border-[#0077B6]/10">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-white" />
+                  </div>
                   <p className="text-muted-foreground">Rencontre entre jeunes de différents secteurs</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#00B4D8]/5 to-[#0077B6]/5 border border-[#00B4D8]/10">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-white" />
+                  </div>
                   <p className="text-muted-foreground">Participation des autorités locales</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 border border-[#0077B6]/10">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-white" />
+                  </div>
                   <p className="text-muted-foreground">Engagement des acteurs économiques</p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-[#0077B6] mt-0.5 flex-shrink-0" />
+                <div className="flex items-start gap-4 p-4 rounded-2xl bg-gradient-to-r from-[#00B4D8]/5 to-[#0077B6]/5 border border-[#00B4D8]/10">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-[#00B4D8] to-[#0077B6] flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="h-4 w-4 text-white" />
+                  </div>
                   <p className="text-muted-foreground">Création d'une tradition locale d'unité</p>
                 </div>
               </div>
             </div>
 
             <div>
-              <Card className="overflow-hidden border-[#0077B6]/20 p-0">
-                <div className="aspect-[4/3] relative">
-                  <img
-                    src="/soccer.jpg"
-                    alt="Engagement communautaire et jeunesse à travers le football"
-                    className="w-full h-full object-cover"
-                  />
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#0077B6]/20 to-[#00B4D8]/20 rounded-3xl blur-2xl"></div>
+                <div className="relative aspect-[4/3] bg-gradient-to-br from-[#0077B6]/10 to-[#00B4D8]/10 rounded-3xl flex items-center justify-center border border-[#0077B6]/20">
+                  <div className="text-center">
+                    <div className="w-24 h-24 rounded-3xl bg-gradient-to-br from-[#0077B6] to-[#00B4D8] flex items-center justify-center mx-auto mb-6 shadow-2xl">
+                      <Heart className="h-12 w-12 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-[#0077B6] mb-2">Communauté Unie</h3>
+                    <p className="text-muted-foreground">Kagbelen Plateau ensemble</p>
+                  </div>
                 </div>
-              </Card>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#0077B6] to-[#00B4D8]">
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-5xl sm:text-6xl font-bold mb-8 text-white">
+          <div className="relative mb-8">
+            <div className="inline-flex items-center gap-3">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-pulse"></div>
+                <div className="w-1 h-1 rounded-full bg-gradient-to-r from-[#00B4D8] to-[#0077B6] animate-bounce"></div>
+                <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-[#0077B6] to-[#00B4D8] animate-ping"></div>
+              </div>
+              <span className="text-base font-bold text-[#0077B6] tracking-wider">INFORMATIONS</span>
+            </div>
+          </div>
+
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-balance bg-gradient-to-r from-[#0077B6] via-[#00B4D8] to-[#0077B6] bg-clip-text text-transparent">
             Rejoignez-nous pour cette édition 2025
           </h2>
-          <p className="text-xl text-white/90 mb-12 leading-relaxed">
-            Un événement citoyen qui rassemble la jeunesse autour des valeurs de solidarité, 
-            respect et unité à travers le sport.
+
+          <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
+            Pour plus d'informations sur le tournoi, les inscriptions ou le parrainage, 
+            contactez-nous dès maintenant.
           </p>
-          <p className="text-lg text-white/80 mb-12">
-            Chaque match est un pas de plus vers une communauté unie et solidaire.
-          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white hover:bg-white/90 text-[#0077B6] text-lg h-14 px-10 rounded-full">
+            <Button asChild size="lg" className="bg-[#0077B6] hover:bg-[#0077B6]/90 text-white text-lg h-14 px-10 rounded-full">
               <Link href="/contact">
                 Nous contacter
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" className="bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white/30 text-white text-lg h-14 px-10 rounded-full">
+            <Button asChild size="lg" className="bg-[#00B4D8]/10 hover:bg-[#00B4D8]/20 backdrop-blur-md border-2 border-[#00B4D8]/30 text-[#00B4D8] text-lg h-14 px-10 rounded-full">
               <Link href="/projects">Voir nos autres projets</Link>
             </Button>
+          </div>
+
+          <div className="mt-12 p-6 bg-gradient-to-r from-[#0077B6]/5 to-[#00B4D8]/5 rounded-2xl border border-[#0077B6]/20">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Globe className="w-6 h-6 text-[#0077B6]" />
+              <span className="text-lg font-semibold">Contact</span>
+            </div>
+            <p className="text-muted-foreground">
+              <strong>Email :</strong> contact@orionguinee.com
+            </p>
           </div>
         </div>
       </section>
