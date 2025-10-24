@@ -315,17 +315,17 @@ export default function ProjectsPage() {
               {
                 title: 'Jeunes accompagnés',
                 icon: Users,
-                description: 'Plus de 500 jeunes actifs dans notre écosystème d\'innovation et de développement',
+                description: 'Plus de 50 jeunes actifs dans notre écosystème d\'innovation et de développement',
               },
               {
                 title: 'Projets lancés',
                 icon: TrendingUp,
-                description: 'Plus de 15 initiatives concrètes qui transforment les communautés guinéennes',
+                description: '1 initiative concrète qui transforme les communautés guinéennes',
               },
               {
                 title: 'Villes touchées',
                 icon: Calendar,
-                description: 'Plus de 10 villes où nous avons créé un impact durable et positif',
+                description: '1 ville où nous avons créé un impact durable et positif',
               },
             ].map((feature, i) => (
               <FeatureCard key={i} feature={feature} />

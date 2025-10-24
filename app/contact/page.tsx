@@ -5,7 +5,7 @@ import type React from "react"
 import { Card } from "@/components/ui/card"
 import { Footer } from "@/components/footer"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Mail, MessageSquare, Instagram, Twitter, Linkedin } from "lucide-react"
+import { Mail, MessageSquare, Instagram, Twitter, Linkedin, Facebook } from "lucide-react"
 import { useEffect } from "react"
 import Link from "next/link"
 
@@ -138,7 +138,8 @@ export default function ContactPage() {
                     {[
                       { icon: Instagram, href: "https://www.instagram.com/orion_guinee?igsh=dmJoNjNicGViNXpj&utm_source=qr", label: "Instagram" },
                       { icon: Twitter, href: "https://x.com/orionguinee?s=21", label: "Twitter" },
-                      { icon: Linkedin, href: "#", label: "LinkedIn" }
+                      { icon: Linkedin, href: "#", label: "LinkedIn" },
+                      { icon: Facebook, href: "https://www.facebook.com/share/1Az5SHYiwn/?mibextid=wwXIfr", label: "Facebook" }
                     ].map(({ icon: Icon, href, label }) => (
                       <a
                         key={label}

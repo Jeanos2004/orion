@@ -126,7 +126,7 @@ export default function HomePage() {
 
                     <div className="flex items-center gap-3 text-[#0077B6] justify-center pt-2">
                       <Users className="h-5 w-5" />
-                      <span className="text-sm font-semibold">+500 jeunes connectés</span>
+                      <span className="text-sm font-semibold">+50 jeunes connectés</span>
                     </div>
                   </div>
                 </div>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Sparkles, ArrowRight, Mail, MapPin, Phone, Instagram, Twitter, Linkedin, Heart } from "lucide-react"
+import { Sparkles, ArrowRight, Mail, MapPin, Phone, Instagram, Twitter, Linkedin, Heart, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
@@ -49,7 +49,8 @@ export function Footer() {
                   {[
                     { icon: Instagram, href: "https://www.instagram.com/orion_guinee?igsh=dmJoNjNicGViNXpj&utm_source=qr", label: "Instagram" },
                     { icon: Twitter, href: "https://x.com/orionguinee?s=21", label: "Twitter" },
-                    { icon: Linkedin, href: "#", label: "LinkedIn" }
+                    { icon: Linkedin, href: "#", label: "LinkedIn" },
+                    { icon: Facebook, href: "https://www.facebook.com/share/1Az5SHYiwn/?mibextid=wwXIfr", label: "Facebook" }
                   ].map(({ icon: Icon, href, label }) => (
                     <a
                       key={label}
