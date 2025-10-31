@@ -41,7 +41,7 @@ export default function FootballKagbelenPage() {
               <Card className="overflow-hidden border-[#0077B6]/20 p-0">
                 <div className="aspect-[4/3] relative">
                   <img
-                    src="/soccer.jpg"
+                    src="/atlakou.png"
                     alt="Tournoi Inter-Secteur de Football de Kagbelen Plateau"
                     className="w-full h-full object-cover"
                   />
